@@ -1,8 +1,7 @@
-const Boton = ({etiqueta}) => {
+const Boton = ({etiqueta, onClick}) => {
   return(
-    <button>{etiqueta}</button>
-    )
-  
+    <button onClick={onClick}>{etiqueta}</button>
+  )
 }
 
 export default Boton 

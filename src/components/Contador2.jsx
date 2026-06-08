@@ -7,16 +7,16 @@ const Contador2 = ({ valorDefault, min, max, step }) => {
 
   const variar = (operacion) => {
     switch (operacion) {
-      case "sumar": 
+      case "sumar":
         if (valor + step > max) {
           return max;
         } return valor + step;
-      case "restar": 
-      if (valor - step < min) {
+      case "restar":
+        if (valor - step < min) {
           return min;
         } return valor - step;
-      case "reset": 
-      return valorDefault;
+      case "reset":
+        return valorDefault;
     }
   }
 
@@ -26,8 +26,7 @@ const Contador2 = ({ valorDefault, min, max, step }) => {
       <h1>Contador</h1>
       <h2>El valor es: {valor}</h2>
       {/* Math.max, Math.min */}
-      <button onClick={() =>
-        setValor(variar("sumar"))}>+</button>
+      <button onClick={() => setValor(variar("sumar"))}>+</button>
       <button onClick={() => setValor(variar("restar"))}>-</button>
       <button onClick={() => setValor(variar("reset"))}>reset</button>
     </div>
@@ -38,7 +37,10 @@ const Contador2 = ({ valorDefault, min, max, step }) => {
 
 
 Contador2.propTypes = {
-  valorDefault: PropTypes.number
+  valorDefault: PropTypes.number,
+  min: PropTypes.number,
+  max: PropTypes.number,
+  step: PropTypes.number
 }
 
 Contador2.defaultProps = {
