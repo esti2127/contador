@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
 import React, { useState } from 'react'
+import Boton from './Boton';
+
 
 const Contador3 = ({valorDefault, min, max, step}) => {
   const [valor, setValor] = useState(valorDefault)
@@ -10,25 +12,13 @@ const Contador3 = ({valorDefault, min, max, step}) => {
       <h1>Contador</h1>
       <h2>El valor es: {valor}</h2>
       {/* Math.max, Math.min */}
-      <button onClick={()=> 
-        setValor(()=>{
-          if(valor+step > max){
-            return max;
-          } return valor+step;
-
-        })}>+</button>
-      <button onClick={()=> setValor(()=>{
-          if(valor-step < min){
-            return min;
-          } return valor-step;
-
-        })}>-</button>
-      <button onClick={()=> setValor(valorDefault)}>reset</button>
+      <Boton etiqueta = "+"/>
+      <Boton etiqueta = "-"/>
+      <Boton etiqueta = "reset"/>
+  
     </div>
   )
 }
-
-
 
 
 Contador3.propTypes = {
