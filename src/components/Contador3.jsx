@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 const Contador3 = ({valorDefault, min, max, step}) => {
   const [valor, setValor] = useState(valorDefault)
   
-
   return (
     <div>
       <h1>Contador</h1>
