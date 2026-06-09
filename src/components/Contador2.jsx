@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react'
 
 const Contador2 = ({ valorDefault, min, max, step }) => {
+  //useState no me ha quedado claro: es el que da las órdenes a valor y a setValor y los desestructura
   const [valor, setValor] = useState(valorDefault)
 
   const variar = (operacion) => {
@@ -38,9 +39,9 @@ const Contador2 = ({ valorDefault, min, max, step }) => {
 
 Contador2.propTypes = {
   valorDefault: PropTypes.number,
-  min: PropTypes.number,
-  max: PropTypes.number,
-  step: PropTypes.number
+  min: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired
 }
 
 Contador2.defaultProps = {

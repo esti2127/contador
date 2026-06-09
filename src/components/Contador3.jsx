@@ -45,9 +45,9 @@ const Contador3 = ({ valorDefault, min, max, step }) => {
 
 Contador3.propTypes = {
   valorDefault: PropTypes.number,
-  min: PropTypes.number,
-  max: PropTypes.number,
-  step: PropTypes.number
+  min: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired
 }
 
 Contador3.defaultProps = {
